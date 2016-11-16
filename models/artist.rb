@@ -1,5 +1,6 @@
 require ('pg')
 require_relative('../db/SqlRunner')
+require_relative('album')
 class Artist
 
 attr_accessor :name
@@ -48,6 +49,14 @@ def album()
   result = album.map{|hash|Album.new(hash)}
   return result
 end
+
+def self.find(id)
+  sql = "SELECT * FROM artists WHERE id = #{id};"
+  result = SqlRunner.run(sql)
+  return result.map{|hash|Artist.new(hash)}
+
+end
+
 
 
 end

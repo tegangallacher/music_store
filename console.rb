@@ -1,8 +1,8 @@
 require ('pry-byebug')
 require_relative ('models/album')
 require_relative ('models/artist')
-Album.delete_all()
-Artist.delete_all()
+# Album.delete_all()
+# Artist.delete_all()
 
 artist1 = Artist.new({
   "name"=>"U2"
@@ -36,8 +36,9 @@ artist1.update()
 album1.genre = "classical"
 album1.update()
 
-album2.delete()
-artist2.delete()
+# album2.delete()
+# artist2.delete()
+artist51 = Artist.find(51)
 
 
 artists = Artist.all()

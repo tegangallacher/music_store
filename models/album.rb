@@ -1,5 +1,6 @@
 require ('pg')
 require_relative('../db/SqlRunner')
+require_relative('artist')
 class Album
 
 attr_accessor :title, :genre, :artist_id
